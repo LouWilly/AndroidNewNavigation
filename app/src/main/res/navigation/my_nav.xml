@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentOne">
+    <fragment
+        android:id="@+id/fragmentFive"
+        android:name="com.example.nav.FragmentFive"
+        android:label="FragmentFive" >
+        <action
+            android:id="@+id/action_fragmentFive_to_fragmentSix"
+            app:destination="@id/fragmentSix" />
+        <action
+            android:id="@+id/action_fragmentFive_to_fragmentFour"
+            app:destination="@id/fragmentFour" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.example.nav.FragmentOne"
+        android:label="nav_fragment_one"
+        tools:layout="@layout/nav_fragment_one" >
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+        <action
+            android:id="@+id/action_fragmentOne_to_fragmentSix"
+            app:destination="@id/fragmentSix" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSix"
+        android:name="com.example.nav.FragmentSix"
+        android:label="FragmentSix" >
+        <action
+            android:id="@+id/action_fragmentSix_to_fragmentFive"
+            app:destination="@id/fragmentFive" />
+        <action
+            android:id="@+id/action_fragmentSix_to_fragmentOne"
+            app:destination="@id/fragmentOne" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFour"
+        android:name="com.example.nav.FragmentFour"
+        android:label="FragmentFour" >
+        <action
+            android:id="@+id/action_fragmentFour_to_fragmentThree"
+            app:destination="@id/fragmentThree" />
+        <action
+            android:id="@+id/action_fragmentFour_to_fragmentFive"
+            app:destination="@id/fragmentFive" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentThree"
+        android:name="com.example.nav.FragmentThree"
+        android:label="FragmentThree" >
+        <action
+            android:id="@+id/action_fragmentThree_to_fragmentTwo"
+            app:destination="@id/fragmentTwo" />
+        <action
+            android:id="@+id/action_fragmentThree_to_fragmentFour"
+            app:destination="@id/fragmentFour" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.example.nav.FragmentTwo"
+        android:label="FragmentTwo" >
+        <action
+            android:id="@+id/action_fragmentTwo_to_fragmentOne"
+            app:destination="@id/fragmentOne" />
+        <action
+            android:id="@+id/action_fragmentTwo_to_fragmentThree"
+            app:destination="@id/fragmentThree" />
+    </fragment>
+</navigation>
